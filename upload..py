@@ -1,3 +1,6 @@
+import boto3
+from botocore.exceptions import NoCredentialsError
+from datetime import datetime, timedelta
 
 def upload_to_s3(local_file, bucket, s3_file):
     s3_client = boto3.client(
